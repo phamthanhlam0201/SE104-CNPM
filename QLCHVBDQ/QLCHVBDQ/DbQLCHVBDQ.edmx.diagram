@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1c3e741fce7e43648bc4076a85911d39" Name="Diagram1">
+        <EntityTypeShape EntityType="QLVBDQModel.BCTONKHO" Width="1.5" PointX="7.5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLVBDQModel.CHUCNANG" Width="1.5" PointX="9.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLVBDQModel.CTPBH" Width="1.5" PointX="10.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLVBDQModel.CTPDV" Width="1.5" PointX="10.5" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLVBDQModel.CTPMH" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLVBDQModel.DVT" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLVBDQModel.KHACHHANG" Width="1.5" PointX="6" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLVBDQModel.LOAIDICHVU" Width="1.5" PointX="8.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLVBDQModel.LOAISANPHAM" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLVBDQModel.NGUOIDUNG" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLVBDQModel.NHACUNGCAP" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLVBDQModel.NHOMNGUOIDUNG" Width="1.5" PointX="12" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLVBDQModel.PHIEUBANHANG" Width="1.5" PointX="8.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLVBDQModel.PHIEUDICHVU" Width="1.5" PointX="8.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLVBDQModel.PHIEUMUAHANG" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLVBDQModel.SANPHAM" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLVBDQModel.sysdiagram" Width="1.5" PointX="2.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLVBDQModel.THAMSO" Width="1.5" PointX="10.75" PointY="8" IsExpanded="true" />
+        <AssociationConnector Association="QLVBDQModel.FK_BCTK_SP" ManuallyRouted="false" />
+        <AssociationConnector Association="QLVBDQModel.FK_CTPBH_PBH" ManuallyRouted="false" />
+        <AssociationConnector Association="QLVBDQModel.FK_CTPBH_SP" ManuallyRouted="false" />
+        <AssociationConnector Association="QLVBDQModel.FK_CTPDV_LDV" ManuallyRouted="false" />
+        <AssociationConnector Association="QLVBDQModel.FK_CTPDV_PDV" ManuallyRouted="false" />
+        <AssociationConnector Association="QLVBDQModel.FK_CTPMH_PMH" ManuallyRouted="false" />
+        <AssociationConnector Association="QLVBDQModel.FK_CTPMH_SP" ManuallyRouted="false" />
+        <AssociationConnector Association="QLVBDQModel.FK_LSP_DVT" ManuallyRouted="false" />
+        <AssociationConnector Association="QLVBDQModel.FK_PBH_KH" ManuallyRouted="false" />
+        <AssociationConnector Association="QLVBDQModel.FK_PDV_KH" ManuallyRouted="false" />
+        <AssociationConnector Association="QLVBDQModel.FK_SP_LSP" ManuallyRouted="false" />
+        <AssociationConnector Association="QLVBDQModel.FK_PMH_NCC" ManuallyRouted="false" />
+        <AssociationConnector Association="QLVBDQModel.PHANQUYEN" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

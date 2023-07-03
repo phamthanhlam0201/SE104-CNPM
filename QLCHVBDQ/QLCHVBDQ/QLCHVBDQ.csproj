@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6C8820D-5972-4B8D-B23E-7317382579B4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLCHVBDQ</RootNamespace>
+    <AssemblyName>QLCHVBDQ</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.5, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.5\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BCTONKHO.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHUCNANG.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTPBH.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTPDV.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTPMH.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\CTPBHDAO.cs" />
+    <Compile Include="DAO\CTPDVDAO.cs" />
+    <Compile Include="DAO\CTPMHDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\LoaiDichVuDAO.cs" />
+    <Compile Include="DAO\LoaiSanPhamDAO.cs" />
+    <Compile Include="DAO\NhaCungCapDAO.cs" />
+    <Compile Include="DAO\PBHDAO.cs" />
+    <Compile Include="DAO\PDVDAO.cs" />
+    <Compile Include="DAO\PMHDAO.cs" />
+    <Compile Include="DAO\SanPhamDAO.cs" />
+    <Compile Include="DbQLCHVBDQ.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbQLCHVBDQ.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DbQLCHVBDQ.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DbQLCHVBDQ.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbQLCHVBDQ.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DVT.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBanHang.Designer.cs">
+      <DependentUpon>fBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBaoCao.Designer.cs">
+      <DependentUpon>fBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fCaiDat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCaiDat.Designer.cs">
+      <DependentUpon>fCaiDat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fChiTietPDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fChiTietPDV.Designer.cs">
+      <DependentUpon>fChiTietPDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fCTBCTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCTBCTK.Designer.cs">
+      <DependentUpon>fCTBCTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fCTPBH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCTPBH.Designer.cs">
+      <DependentUpon>fCTPBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fCTPMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCTPMH.Designer.cs">
+      <DependentUpon>fCTPMH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDangKy.Designer.cs">
+      <DependentUpon>fDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDichVu.Designer.cs">
+      <DependentUpon>fDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDVT.Designer.cs">
+      <DependentUpon>fDVT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLoaiDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLoaiDichVu.Designer.cs">
+      <DependentUpon>fLoaiDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLoaiSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLoaiSanPham.Designer.cs">
+      <DependentUpon>fLoaiSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLuuThongTinTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLuuThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>fLuuThongTinTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fMuaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMuaHang.Designer.cs">
+      <DependentUpon>fMuaHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNhaCungCap.Designer.cs">
+      <DependentUpon>fNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNhanVien.Designer.cs">
+      <DependentUpon>fNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSanPham.Designer.cs">
+      <DependentUpon>fSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThemCTPBH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemCTPBH.Designer.cs">
+      <DependentUpon>fThemCTPBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThemCTPDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemCTPDV.Designer.cs">
+      <DependentUpon>fThemCTPDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThemCTPMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemCTPMH.Designer.cs">
+      <DependentUpon>fThemCTPMH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThemDVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemDVT.Designer.cs">
+      <DependentUpon>fThemDVT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThemLDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemLDV.Designer.cs">
+      <DependentUpon>fThemLDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThemLoaiSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemLoaiSP.Designer.cs">
+      <DependentUpon>fThemLoaiSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThemNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemNCC.Designer.cs">
+      <DependentUpon>fThemNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThemPBH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemPBH.Designer.cs">
+      <DependentUpon>fThemPBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThemPDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemPDV.Designer.cs">
+      <DependentUpon>fThemPDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThemPMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemPMH.Designer.cs">
+      <DependentUpon>fThemPMH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThongTinTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>fThongTinTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fTLTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTLTT.Designer.cs">
+      <DependentUpon>fTLTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fTrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTrangChu.Designer.cs">
+      <DependentUpon>fTrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetAccountByEmailPassword_Result.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAccountByEmail_Result.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KHACHHANG.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOAIDICHVU.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOAISANPHAM.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NGUOIDUNG.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NHACUNGCAP.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NHOMNGUOIDUNG.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PHIEUBANHANG.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PHIEUDICHVU.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PHIEUMUAHANG.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SANPHAM.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="THAMSO.cs">
+      <DependentUpon>DbQLCHVBDQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fThemSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemSP.Designer.cs">
+      <DependentUpon>fThemSP.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="fBanHang.resx">
+      <DependentUpon>fBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBaoCao.resx">
+      <DependentUpon>fBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCaiDat.resx">
+      <DependentUpon>fCaiDat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fChiTietPDV.resx">
+      <DependentUpon>fChiTietPDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCTBCTK.resx">
+      <DependentUpon>fCTBCTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCTPBH.resx">
+      <DependentUpon>fCTPBH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCTPMH.resx">
+      <DependentUpon>fCTPMH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDangKy.resx">
+      <DependentUpon>fDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDichVu.resx">
+      <DependentUpon>fDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDVT.resx">
+      <DependentUpon>fDVT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLoaiDichVu.resx">
+      <DependentUpon>fLoaiDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLoaiSanPham.resx">
+      <DependentUpon>fLoaiSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLuuThongTinTaiKhoan.resx">
+      <DependentUpon>fLuuThongTinTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMuaHang.resx">
+      <DependentUpon>fMuaHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNhaCungCap.resx">
+      <DependentUpon>fNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNhanVien.resx">
+      <DependentUpon>fNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSanPham.resx">
+      <DependentUpon>fSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemCTPBH.resx">
+      <DependentUpon>fThemCTPBH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemCTPDV.resx">
+      <DependentUpon>fThemCTPDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemCTPMH.resx">
+      <DependentUpon>fThemCTPMH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemDVT.resx">
+      <DependentUpon>fThemDVT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemLDV.resx">
+      <DependentUpon>fThemLDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemLoaiSP.resx">
+      <DependentUpon>fThemLoaiSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemNCC.resx">
+      <DependentUpon>fThemNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemPBH.resx">
+      <DependentUpon>fThemPBH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemPDV.resx">
+      <DependentUpon>fThemPDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemPMH.resx">
+      <DependentUpon>fThemPMH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThongTinTaiKhoan.resx">
+      <DependentUpon>fThongTinTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTLTT.resx">
+      <DependentUpon>fTLTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTrangChu.resx">
+      <DependentUpon>fTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="fThemSP.resx">
+      <DependentUpon>fThemSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="DbQLCHVBDQ.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DbQLCHVBDQ.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DbQLCHVBDQ.edmx.diagram">
+      <DependentUpon>DbQLCHVBDQ.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\QLCHVBDQ.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\QLCHVBDQ.Properties.Settings.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DbQLCHVBDQ.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DbQLCHVBDQ.Context.cs</LastGenOutput>
+      <DependentUpon>DbQLCHVBDQ.edmx</DependentUpon>
+    </Content>
+    <Content Include="DbQLCHVBDQ.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DbQLCHVBDQ.edmx</DependentUpon>
+      <LastGenOutput>DbQLCHVBDQ.cs</LastGenOutput>
+    </Content>
+    <None Include="resources\Arrow_Up_LG.png" />
+    <Content Include="resources\background.png" />
+    <Content Include="resources\crop.png" />
+    <None Include="resources\UserCircle.png" />
+    <None Include="resources\Settings.png" />
+    <None Include="resources\Search_Magnifying_Glass.png" />
+    <None Include="resources\sanpham.png" />
+    <None Include="resources\ncc.png" />
+    <None Include="resources\logose-01 1.png" />
+    <None Include="resources\img_login.png" />
+    <None Include="resources\Icon_plus.png" />
+    <None Include="resources\dichvu.png" />
+    <None Include="resources\Trash_Full.png" />
+    <None Include="resources\More_Vertical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
